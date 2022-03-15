@@ -16,10 +16,10 @@ class MessagesController < ApplicationController
     @message = Message.new(message_params)
 
     if @message.save
-      flash[:success] = 'Message が正常に投稿されました'
+      flash[:success] = 'MEMO が記録されました。今日も子育ておつかれさまです♪'
       redirect_to @message
     else
-      flash.now[:danger] = 'Message が投稿されませんでした'
+      flash.now[:danger] = 'MEMO が記録されませんでした。おつかれが出ていないですか？'
       render :new
     end
   end
@@ -29,10 +29,10 @@ class MessagesController < ApplicationController
 
   def update
     if @message.update(message_params)
-      flash[:success] = 'Message は正常に更新されました'
+      flash[:success] = 'MEMO が記録されました。今日も子育ておつかれさまです♪'
       redirect_to @message
     else
-      flash.now[:danger] = 'Message は更新されませんでした'
+      flash.now[:danger] = 'MEMO が記録されませんでした。おつかれが出ていないですか？'
       render :edit
     end
   end
@@ -40,7 +40,7 @@ class MessagesController < ApplicationController
   def destroy
     @message.destroy
 
-    flash[:success] = 'Message は正常に削除されました'
+    flash[:success] = 'MEMO が削除されました。今日も子育ておつかれさまです♪'
     redirect_to messages_url
   end
 

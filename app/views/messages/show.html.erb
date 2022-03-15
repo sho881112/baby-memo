@@ -1,4 +1,4 @@
-<h1>id: <%= @message.id %> のメッセージ詳細ページ</h1>
+<h1>id: <%= @message.id %> のMEMO詳細ページ</h1>
 
 <table class="table table-bordered">
   <tr>
@@ -6,14 +6,14 @@
     <td><%= @message.id %></td>
   </tr>
   <tr>
-    <th>タイトル</th>
+    <th>日付</th>
     <td><%= @message.title %></td>
   </tr>
   <tr>
-    <th>メッセージ</th>
+    <th>MEMO</th>
     <td><%= @message.content %></td>
   </tr>
 </table>
 
-<%= link_to 'このメッセージを編集する', edit_message_path(@message), class: 'btn btn-light' %>
-<%= link_to 'このメッセージを削除する', @message, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
+<%= link_to 'このMEMOを編集する', edit_message_path(@message), class: 'btn btn-light' %>
+<%= link_to 'このMEMOを削除する', @message, method: :delete, data: { confirm: '本当に削除してよろしいですか？' }, class: 'btn btn-danger' %>
