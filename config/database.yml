@@ -50,6 +50,9 @@ test:
 #
 production:
   <<: *default
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
   database: baby_memo_production
   username: baby_memo
   password: <%= ENV['BABY_MEMO_DATABASE_PASSWORD'] %>
